@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+.mat-column-Horario {
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 20px;
+}
+.presentation_picture{
+  margin-left: 50px;
+}

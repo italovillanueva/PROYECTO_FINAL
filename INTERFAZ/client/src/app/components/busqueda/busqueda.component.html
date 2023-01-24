@@ -1,0 +1,361 @@
+<div class="container p-2">
+
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Escuela de Ingenieria Mecatronica
+        </mat-panel-title>
+        <mat-panel-description>
+          Curso de Analisis Matematico IV
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-tab-group color="white" backgroundColor="warn">
+        <mat-tab label="DATOS DEL ESTUDIANTE">
+          <table mat-table [dataSource]="nombre" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>Matricula</th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Nombres </th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.NombreA}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Apellidos </th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.ApellidoA}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Correo </th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.correoInst}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+        <mat-tab label="UNIDAD 1">
+          <table mat-table [dataSource]="registro" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>N. Matricula</th>
+              <td mat-cell *matCellDef="let registro"> {{registro.Alumno_Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Semana 1 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Semana 2 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Semana 3 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+        <mat-tab label="UNIDAD 2">
+          <table mat-table [dataSource]="registro" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>N. Matricula</th>
+              <td mat-cell *matCellDef="let registro"> {{registro.Alumno_Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Semana 1 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Semana 2 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Semana 3 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+        <mat-tab label="UNIDAD 3">
+          <table mat-table [dataSource]="registro" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>N. Matricula</th>
+              <td mat-cell *matCellDef="let registro"> {{registro.Alumno_Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Semana 1 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Semana 2 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Semana 3 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title color="accent">
+          Ing. Industrial
+        </mat-panel-title>
+        <mat-panel-description>
+          Curso de Ingenieria de Procesos
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-tab-group color="white" backgroundColor="accent">
+        <mat-tab label="DATOS DEL ESTUDIANTE">
+          <table mat-table [dataSource]="nombre" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>Matricula</th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Nombres </th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.NombreA}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Apellidos </th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.ApellidoA}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Correo </th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.correoInst}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+        <mat-tab label="UNIDAD 1">
+          <table mat-table [dataSource]="registro" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>N. Matricula</th>
+              <td mat-cell *matCellDef="let registro"> {{registro.Alumno_Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Semana 1 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Semana 2 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Semana 3 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+        <mat-tab label="UNIDAD 2">
+          <table mat-table [dataSource]="registro" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>N. Matricula</th>
+              <td mat-cell *matCellDef="let registro"> {{registro.Alumno_Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Semana 1 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Semana 2 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Semana 3 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+        <mat-tab label="UNIDAD 3">
+          <table mat-table [dataSource]="registro" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>N. Matricula</th>
+              <td mat-cell *matCellDef="let registro"> {{registro.Alumno_Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Semana 1 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Semana 2 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Semana 3 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Escuela de Ing. Mecanica
+        </mat-panel-title>
+        <mat-panel-description>
+          Curso de Dinamica
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-tab-group color="white" backgroundColor="primary">
+        <mat-tab label="DATOS DEL ESTUDIANTE">
+          <table mat-table [dataSource]="nombre" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>Matricula</th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Nombres </th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.NombreA}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Apellidos </th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.ApellidoA}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Correo </th>
+              <td mat-cell *matCellDef="let nombre"> {{nombre.correoInst}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+        <mat-tab label="UNIDAD 1">
+          <table mat-table [dataSource]="registro" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>N. Matricula</th>
+              <td mat-cell *matCellDef="let registro"> {{registro.Alumno_Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Semana 1 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Semana 2 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Semana 3 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+        <mat-tab label="UNIDAD 2">
+          <table mat-table [dataSource]="registro" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>N. Matricula</th>
+              <td mat-cell *matCellDef="let registro"> {{registro.Alumno_Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Semana 1 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Semana 2 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Semana 3 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+        <mat-tab label="UNIDAD 3">
+          <table mat-table [dataSource]="registro" class="mat-elevation-z8">
+            <ng-container matColumnDef="Alumno_Num_matricula">
+              <th mat-header-cell *matHeaderCellDef>N. Matricula</th>
+              <td mat-cell *matCellDef="let registro"> {{registro.Alumno_Num_matricula}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Nombres">
+              <th mat-header-cell *matHeaderCellDef> Semana 1 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Apellidos">
+              <th mat-header-cell *matHeaderCellDef> Semana 2 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Correo">
+              <th mat-header-cell *matHeaderCellDef> Semana 3 </th>
+              <td mat-cell *matCellDef="let registro"> {{registro.horaFecha}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+
+
+
